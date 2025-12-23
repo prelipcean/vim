@@ -1,0 +1,31 @@
+# ============================================================================
+# .gitignore for Vim configuration
+# ============================================================================
+# This file lists files and folders to be ignored by git in your Vim config.
+# It helps keep your repository clean of generated, temporary, and plugin files.
+
+# --- Plugin Manager and Runtime ---
+plugged/           # Plugins installed by plugin manager
+autoload/          # Autoloaded scripts (often generated)
+
+# --- Undo and History Files ---
+undodir/           # Persistent undo files (if set with undodir)
+.netrwhist         # netrw file explorer history
+
+# --- Swap, Backup, and Temp Files ---
+*.swp              # Vim swap files
+*.swo              # Vim swap files (alternate)
+*.bak              # Backup files
+*.tmp              # Temporary files
+
+# --- Session and Tag Files ---
+Session.vim        # Vim session files
+tags               # Tag files for code navigation
+
+# --- Viminfo and Misc ---
+.viminfo           # Vim info/history file
+
+# --- OS-specific files ---
+.DS_Store          # macOS Finder metadata
+
+# End of .gitignore
