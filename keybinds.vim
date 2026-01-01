@@ -68,4 +68,22 @@ nnoremap <leader>sc :close<CR>
 nnoremap <leader>so :only<CR>
 nnoremap <leader>se <C-w>=
 
+" --- Tab Management ---
+" <leader>tn - New tab
+" <leader>tc - Close tab
+" <leader>to - Close other tabs
+" <leader>th - Previous tab
+" <leader>tl - Next tab
+" <leader>tf - First tab
+" <leader>te - Last tab
+" <leader>tm - Move tab to position (prompts for number)
+nnoremap <leader>tn :tabnew<CR>
+nnoremap <leader>tc :tabclose<CR>
+nnoremap <leader>to :tabonly<CR>
+nnoremap <leader>th :tabprev<CR>
+nnoremap <leader>tl :tabnext<CR>
+nnoremap <leader>tf :tabfirst<CR>
+nnoremap <leader>te :tablast<CR>
+nnoremap <leader>tm :tabmove<Space>
+
 " End of keybinds.vim
