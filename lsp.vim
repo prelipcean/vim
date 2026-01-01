@@ -28,13 +28,23 @@ let lspServers = [
 autocmd User LspSetup call LspAddServer(lspServers)
 
 " --- Key Mappings for LSP Features ---
-nnoremap gd :LspGotoDefinition<CR>        " Go to definition
-nnoremap gr :LspShowReferences<CR>        " Show references
-nnoremap K  :LspHover<CR>                 " Show hover documentation
-nnoremap gl :LspDiag current<CR>          " Show diagnostics for current line
-nnoremap <leader>nd :LspDiag next \| LspDiag current<CR>            " Jump to next diagnostic
-nnoremap <leader>pd :LspDiag prev \| LspDiag current<CR>            " Jump to previous diagnostic
-inoremap <silent> <C-Space> <C-x><C-o>    " Trigger completion in insert mode
+" nnoremap = normal mode, non-recursive map
+" inoremap = insert mode, non-recursive map
+" <silent> = don't echo the command
+"
+" <leader>ld - Go to definition
+" <leader>lr - Show references
+" <leader>lh - Show hover documentation
+" <leader>ll - Show diagnostics for current line
+" <leader>ln - Jump to next diagnostic
+" <leader>lp - Jump to previous diagnostic
+nnoremap <silent> <leader>ld <Cmd>LspGotoDefinition<CR>
+nnoremap <silent> <leader>lr <Cmd>LspShowReferences<CR>
+nnoremap <silent> <leader>lh <Cmd>LspHover<CR>
+nnoremap <silent> <leader>ll :LspDiag current<CR>
+nnoremap <silent> <leader>ln :LspDiag next<CR>
+nnoremap <silent> <leader>lp :LspDiag prev<CR>
+inoremap <silent> <C-Space> <C-x><C-o>
 
 " --- Completion ---
 autocmd FileType php setlocal omnifunc=lsp#complete
